@@ -46,5 +46,6 @@ public class Main {
         continuar = false;
       }
     }
+    Persistencia.guardadoArrayList(alumnos, "Alumnos Sistemas.txt");
   }
 }
