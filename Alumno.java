@@ -6,7 +6,8 @@ public class Alumno {
   private String apellidoPaterno;
   private String apellidoMaterno;
 
-  public Alumno(String nombre, int edad, char genero, String numeroDeControl, String apellidoPaterno, String apellidoMaterno) {
+  public Alumno(String nombre, int edad, char genero, String numeroDeControl, String apellidoPaterno,
+      String apellidoMaterno) {
     this.nombre = nombre;
     this.genero = genero;
     this.edad = edad;
@@ -53,6 +54,15 @@ public class Alumno {
 
   public String getNumeroDeControl() {
     return numeroDeControl;
+  }
+
+  // Se te paso esto :) pero ya lo corregi //
+  public String getApellidoPaterno() {
+    return apellidoPaterno;
+  }
+
+  public String getApellidoMaterno() {
+    return apellidoMaterno;
   }
 
   public String toString() {

@@ -1,11 +1,16 @@
 import java.io.*;
+import java.util.ArrayList;
 
 public class Persistencia {
 
-    public void guardar(Alumno alumno, String nombreArchivo) {
-        try (ObjectOutputStream archivo = new ObjectOutputStream(new FileOutputStream(nombreArchivo))) {
-            archivo.writeObject(alumno);
-            System.out.println("Archivo guardado correctamente...");
+    public static void guardadoArrayList(ArrayList<Alumno> listaAlumnos, String nombreLista) {
+        try (PrintWriter archivoEscrito = new PrintWriter(new FileWriter(nombreLista))) {
+            for (Alumno alumno : listaAlumnos) {
+                archivoEscrito.println(alumno.getNombre() + "," + alumno.getApellidoPaterno() + ","
+                        + alumno.getApellidoMaterno()
+                        + "," + alumno.getNumeroDeControl() + "," + alumno.getEdad() + "," + alumno.getGenero());
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
